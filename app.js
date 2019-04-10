@@ -1,22 +1,22 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('public'));
+app.use(express.static("username_public"));
 
 var mysql		 = require('mysql');
 var connection   = mysql.createConnection({
 	host     : 'localhost',
 	user   	 : 'root',
-	password : 'password',
-	database : 'tvshows_db'
+	password : '12345',
+	database : 'username_db'
 });
 
 connection.connect();
 
-app.get('/tvshows', function(req, res) {
-	connection.query('SELECT * FROM tvshows', function(error, results, fields) {
+app.get('/username.json', function(req, res) {
+	connection.query("SELECT * FROM username", function (error, results, fields) {
 		if(error) res.send(error)
-			else res.json(results);
+		else res.json(results);
 	});
 });
 

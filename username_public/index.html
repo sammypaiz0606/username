@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Username</title>
+      
+      
+        
+    </head>
+    
+<body>
+
+<div></div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  
+  <script type='text/javascript'>
+    $.ajax({
+      url: '/username.json',
+      method: 'GET'
+    }).then(function(res) {
+      // for(var usernameIndex in username) {
+      //   var p = $('<p>');
+      //   p.text(JSON.stringify(username[usernameIndex]))
+
+        $('div').text(JSON.stringify(res));
+
+      //}
+    }); 
+  </script>
+
+</body>
+</html>
