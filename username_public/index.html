@@ -3,11 +3,18 @@
     <head>
         <title>Username</title>
       
-      
+      <link rel='stylesheet' href='./assets/css/style.css'/>
         
     </head>
     
 <body>
+
+<form>
+  <input type='text' name='username_name' placeholder='give a name'>
+
+  <button>Insert a name</button>
+</form>
+
 
 <div></div>
 
@@ -15,21 +22,10 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
-  
-  <script type='text/javascript'>
-    $.ajax({
-      url: '/username.json',
-      method: 'GET'
-    }).then(function(res) {
-      // for(var usernameIndex in username) {
-      //   var p = $('<p>');
-      //   p.text(JSON.stringify(username[usernameIndex]))
-
-        $('div').text(JSON.stringify(res));
-
-      //}
-    }); 
-  </script>
-
+<script type='text/javascript' src='/assets/js/username_select.js'></script>
+<script type='text/javascript' src='/assets/js/username_insert.js'></script>
+ <script type='text/javascript'>
+   userName();
+ </script>
 </body>
 </html>

@@ -20,6 +20,15 @@ app.get('/username.json', function(req, res) {
 	});
 });
 
+app.get('/username_insert', function(req, res) {
+	connection.query('INSERT INTO username (username_name) VALUES (?)', [req.query.username_name ], function (error, results, fields) {
+		if(error) res.send(error)
+		else res.json({
+			message: 'success'
+		});
+	});
+});
+
 app.listen(3001, function() {
 	console.log('listening on 3001');
 });
