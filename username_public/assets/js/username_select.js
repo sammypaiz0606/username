@@ -13,6 +13,12 @@ function userName() {
 
         p.text(`id: ${username[usernameIndex].id}, name: ${username[usernameIndex].username_name}`)
 
+        var a = $('<a>'); //<a></a>
+        a.text('delete'); //<a>delete</a>
+        a.attr('href', '/username_delete?username_id=' + username[usernameIndex].id);
+        //<a href='/username_delete?usernam_id3'>delete</a>
+
+        p.append(a);
         $('div').prepend(p);
 
       };

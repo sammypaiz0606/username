@@ -29,6 +29,13 @@ app.get('/username_insert', function(req, res) {
 	});
 });
 
+
+app.get('/username_delete', function(req, res) {
+	connection.query('DELETE FROM username WHERE id = (?)', [req.query.username_id], function (error, results, fields) {
+		res.redirect('/');
+	});
+});
+
 app.listen(3001, function() {
 	console.log('listening on 3001');
 });
