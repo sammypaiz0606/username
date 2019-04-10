@@ -13,7 +13,7 @@ function userName() {
 
         p.text(`id: ${username[usernameIndex].id}, name: ${username[usernameIndex].username_name}`)
 
-        $('div').prepend(p);
+        $('div').append(p);
 
       };
     }); 
