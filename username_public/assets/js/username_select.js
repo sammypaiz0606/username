@@ -1,6 +1,6 @@
 
 function userName(){
-  $('div').empty();
+  $('article').empty();
 
   $.ajax({
     url: '/username.json',
