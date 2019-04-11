@@ -1,8 +1,7 @@
-$('form').submit(function(e) {
+$('#insert_username').submit(function(e) {
 
       e.preventDefault();
-      
-      var un = $("input[name='username_name']").val();
+      var un = $("#insert_username input[name='username_name']").val();
 
       $.ajax({
           url: '/username_insert',

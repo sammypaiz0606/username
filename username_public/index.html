@@ -3,28 +3,38 @@
     <head>
         <title>Username</title>
       
-      <link rel='stylesheet' href='./assets/css/style.css'/>
+      <link rel='stylesheet' type='text/css' href='/assets/css/style.css'/>
         
     </head>
     
 <body>
+<h1>Name</h1>
 
-<form>
-  <input type='text' name='username_name' placeholder='give a name'>
+  <h2>Insert a Name</h2>
+  <form id='insert_username'>
+      <input type='text' name='username_name' placeholder='give a name'>
 
-  <button>Insert a name</button>
-</form>
+      <button>Insert a name</button>
+  </form>
 
+  <h2>Update Name</h2>
+  <form id='update_username'>
+      <input type='number' name='username_id' placeholder='give a name id'>
 
+      <input type='text' name='username_name' placeholder='give a name'>
 
+      <button>Update a name</button>
+  </form>
+  <article></article>
 <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 <script type='text/javascript' src='/assets/js/username_select.js'></script>
 <script type='text/javascript' src='/assets/js/username_insert.js'></script>
- <script type='text/javascript'>
+<script type='text/javascript' src='/assets/js/username_update.js'></script>
+<script type='text/javascript'>
    userName();
- </script>
+</script>
 </body>
 </html>
