@@ -20,7 +20,7 @@ app.get('/username.json', function(req, res) {
 	});
 });
 
-// http://localhost:3001/cats-insert?cat_name=bobbi
+// http://localhost:3001/username-insert?username_name=bobbi
 
 app.get('/username_insert', function(req, res) {
 	connection.query('INSERT INTO username (username_name) VALUES (?)', [req.query.username_name], function (error, results, fields) {
@@ -31,7 +31,7 @@ app.get('/username_insert', function(req, res) {
 	});
 });
 
-// // // http://localhost:3001/cats-delete?cat_id=3
+// // // http://localhost:3001/username-delete?username_id=3
 
 app.get('/username_delete', function(req, res) {
 	connection.query('DELETE FROM username WHERE id = (?)', [req.query.username_id], function (error, results, fields) {

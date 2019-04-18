@@ -7,9 +7,9 @@ function userName(){
     method: 'GET'
   }).then(function(username){
     for (var usernameIndex in username){
-      // console.log(catIndex);
-      // console.log(cats[catIndex]);
-      // console.log(cats);
+      // console.log(usernameIndex);
+      // console.log(username[usernameIndex]);
+      // console.log(username);
 
       var p = $('<p>'); // <p></p>
 
@@ -20,7 +20,7 @@ function userName(){
         // p.text("id: " + cats[catIndex].id + ", cat name: " + cats[catIndex].cat_name)
 
       //another way
-        p.text(`id: ${username[usernameIndex].id}, cat name: ${username[usernameIndex].username_name}`)
+        p.text(`id: ${username[usernameIndex].id}, name: ${username[usernameIndex].username_name}`)
 
         var a = $('<a>'); //<a></a>
         a.text('delete'); //<a>delete</a>
